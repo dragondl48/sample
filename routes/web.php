@@ -19,3 +19,17 @@ Route::get('/', function () {
 });
 
 Route::get('hieu', [FirstController::class, 'index']);
+
+Route::prefix('categories')->group(function(){
+    Route::get('/',[FirstController::class,'aaa'])->name('categories.list');
+
+    Route::get('edit/{id}',[FirstController::class,'getCategory'])->name('categories.edit');
+
+    Route::post('edit/{id}',[FirstController::class,'updateCategory']);
+
+    Route::get('/add',[FirstController::class,'addCategory'])->name('categories.add');
+
+    Route::post('/add',[FirstController::class,'handleAddCategory']);
+
+    Route::post('/delete/{id}',[FirstController::class,'deleteCategory'])->name('categories.delete');
+});
