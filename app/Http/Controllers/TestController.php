@@ -14,6 +14,7 @@ class TestController extends Controller
         // }
         try {
             DB::connection()->getPdo();
+            return 'connect';
         } catch (\Exception $e) {
             die("Could not connect to the database.  Please check your configuration. error:" . $e );
         }
