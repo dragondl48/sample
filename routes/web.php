@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
+use App\Http\Controllers\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +34,5 @@ Route::prefix('categories')->group(function(){
 
     Route::post('/delete/{id}',[FirstController::class,'deleteCategory'])->name('categories.delete');
 });
+
+Route::get('/test', [TestController::class, 'test']);

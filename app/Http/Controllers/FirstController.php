@@ -33,15 +33,15 @@ class FirstController extends Controller
 
     public function handleAddCategory(Request $request){
         $categoriesName=$request->input('categoryName');
-        // $my_array=array();
-        // array_push($my_array,$categoriesName);
-        // foreach($my_array as $my_array){
-		//     // echo $my_array ;
-        //     print_r($my_array);
-		// }
+        $my_array=array();
+        array_push($my_array,$categoriesName);
+        foreach($my_array as $my_array){
+		    // echo $my_array ;
+            print_r($my_array);
+		}
         
         
-        return $categoriesName;
+        return $my_array;
     }
 
     public function deleteCategory($id){
