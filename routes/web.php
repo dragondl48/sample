@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FirstController;
+use App\Http\Controllers\ShowData;
 use App\Http\Controllers\TestController;
 
 /*
@@ -36,3 +37,6 @@ Route::prefix('categories')->group(function(){
 });
 
 Route::get('/test', [TestController::class, 'test']);
+Route::get('/teacher',[ShowData::class,'show']);
+Route::get('edit-student/{id}', [ShowData::class, 'update']);
+Route::post('update-student/{id}',[ShowData::class],'handleUpdate');

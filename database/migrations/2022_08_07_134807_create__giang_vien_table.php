@@ -13,7 +13,7 @@ class CreateGiangVienTable extends Migration
      */
     public function up()
     {
-        Schema::create('_giang_vien', function (Blueprint $table) {
+        Schema::create('teacher', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name',100);
             $table->string('email',100)->unique();
@@ -28,6 +28,6 @@ class CreateGiangVienTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('_giang_vien');
+        Schema::dropIfExists('teacher');
     }
 }
