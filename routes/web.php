@@ -39,4 +39,5 @@ Route::prefix('categories')->group(function(){
 Route::get('/test', [TestController::class, 'test']);
 Route::get('/teacher',[ShowData::class,'show']);
 Route::get('edit-student/{id}', [ShowData::class, 'update']);
-Route::post('update-student/{id}',[ShowData::class],'handleUpdate');
+Route::post('update-student/{id}',[ShowData::class,'handleUpdate']);
+Route::get('delete-student/{id}',[ShowData::class,'remove']);

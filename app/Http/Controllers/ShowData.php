@@ -17,11 +17,17 @@ class ShowData extends Controller
     }
 
     public function handleUpdate(Request $request){
-        // $teacher=Teacher::find();
-        dd($request);
-        // $teacher->name=$request->input('name');
-        // $teacher->email = $request->input('email');
-        // $teacher->update();
-        // echo 'update success';
+        $teacher=Teacher::find($request->id);
+        
+        $teacher->name=$request->input('name');
+        $teacher->email = $request->input('email');
+        $teacher->update();
+        echo 'update success';
+    }
+
+    public function remove(Request $request){
+        $teacher=Teacher::find($request->id);
+        $teacher->delete();
+        echo 'remove success';
     }
 }

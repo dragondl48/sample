@@ -33,7 +33,13 @@
         </thead> -->
 
         <tbody>
-
+            <tr>
+                @foreach($teacher as $item)
+                <td>
+                    <a href="{{ url('delete-student/'.$item->id) }}" class="btn btn-danger btn-sm">Delete</a>
+                </td>
+                @endforeach
+            </tr>
             <tr>
                 @foreach($teacher as $item)
                 <td>
