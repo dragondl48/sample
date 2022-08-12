@@ -20,4 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('api',[APIComtroller::class,'getData']);
-Route::get('/teacher',[APIComtroller::class,'show']);
+// Route::post('/teacher',[APIComtroller::class,'show']);
